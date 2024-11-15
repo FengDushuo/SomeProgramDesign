@@ -1,0 +1,6 @@
+<!--pages/share/index.wxml-->
+<image src='{{img}}' class='img' bindtap='save' mode='widthFix'></image>
+<view class='text'>点击分享图保存到手机相册<text class='reload' space="nbsp" bindtap='reload'>  刷新分享图</text></view>
+<view class='save' bindtap='back'>
+  返回
+</view>

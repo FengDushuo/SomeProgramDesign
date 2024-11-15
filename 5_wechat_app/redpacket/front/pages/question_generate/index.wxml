@@ -1,0 +1,11 @@
+<!--pages/generate/index.wxml-->
+<view class="main">
+  <image class="bgimg" src="/img/generatebg.jpg"></image>
+  <view class='generate'>你生成了一个答题红包</view>
+  <button open-type='share' class='share send' hover-class='none' open-type="share">
+    <image src='/img/forward.png'></image>
+    <view>发送给好友</view>
+  </button>
+  <image class='send' src='/img/generate-share.jpg'></image>
+  <image class='send detail' bindtap='detail' src='/img/generate-detail.jpg'></image>
+</view>

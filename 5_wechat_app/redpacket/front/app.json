@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/index/index",
+    "pages/question_index1/index",
+    "pages/question_already/index",
+    "pages/question_lssue/index",
+    "pages/question_library/index",
+    "pages/question_order/index",
+    "pages/question_demolition/index",
+    "pages/question_generate/index",
+    "pages/question_member/index",
+    "pages/question_cash/index",
+    "pages/question_problem/index",
+    "pages/question_record/index",
+    "pages/question_detail/index",
+    "pages/question_answer/index",
+    "pages/question_open/index",
+    "pages/question_share/index",
+    "pages/recordDetails/recordDetails",
+    "pages/squareHome/squareHome",
+    "pages/userCenter/userCenter",
+    "pages/share/share",
+    "pages/balance/balance",
+    "pages/report/report",
+    "pages/help/help",
+    "pages/record/record",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#DE4C56",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发红包",
+        "iconPath": "images/red-packet.png",
+        "selectedIconPath": "images/red-packet-on.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的包",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-on.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#de4c56",
+    "navigationBarTitleText": "红包",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

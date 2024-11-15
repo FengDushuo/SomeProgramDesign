@@ -1,0 +1,111 @@
+.main{
+  font-size: 32rpx;
+}
+.head{
+  background: #d95940;
+  color: #fff;
+  height: 240rpx;
+  padding-top: 160rpx;
+}
+.head .avatar{
+  width:150rpx;
+  height:150rpx;
+  border-radius: 50%;
+  border:2rpx solid #f0e9cd;
+  margin: 0 auto;
+}
+.head .avatar image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.head .username{
+  margin-top: 20rpx;
+  text-align: center;
+}
+.content image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.content{
+  margin-top: 20rpx;
+  line-height: 100rpx;
+}
+.wallet{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx; 
+}
+.wallet .wallet-center{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.money{
+  color: #d95940;
+}
+.margin-none{
+  margin-bottom: 0;
+}
+.last{
+  border-top: 2rpx solid #eee;
+}
+.service{
+  text-align:left;
+  font-size:32rpx;
+  padding: 0;
+  line-height: 100rpx;
+}
+button[plain]{
+  border: none;
+}
+.authbg{
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.auth{
+  width: 560rpx;
+  height: 500rpx;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 50%;
+  border-radius: 20rpx;
+}
+.auth-title{
+  font-weight: bold;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #ebebeb;
+  text-align: center;
+}
+.auth-content{
+  padding: 50rpx;
+  padding-bottom: 10rpx;
+  line-height: 50rpx;
+}
+.auth-button{
+  width:100%;
+  margin-top:30rpx;
+  color:#fff;
+}
+.auth-button[size=mini]{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+}
+.auth-service{
+  font-size: 24rpx;
+  display:inline-block;
+  left:50%;
+  transform: translateX(-50%);
+}
+.auth-service[plain]{
+  border: none;
+  color:#646f8d;
+}

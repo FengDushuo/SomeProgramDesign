@@ -1,0 +1,22 @@
+<!--pages/lssue/index.wxml-->
+<view class="main" style="background-image:url('{{bg}}');"><!--真机需要更换为网络图片-->
+  <view class='top'>
+    <view class='num'>题目{{selectedNum}}/{{num}}</view>
+    <view class='center'></view>
+    <view class='switch' bindtap='switch'>
+      <image src='/images/switch.png'></image>
+      <view class='font'>换一题</view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='subject'>
+      <view class='problem'>{{subject.question}}</view>
+      <view wx:for="{{subject.options}}" class="answer {{index == selectedIdx ? 'selected' : ''}}" bindtap='selected' data-id="{{subject.id}}" data-index="{{index}}">{{item}}</view>
+    </view>
+  </view>
+  <view class='choice'>
+    <view bindtap='already'>已出题目</view>
+    <view class='choice-center' bindtap='library'>更多题库</view>
+    <view bindtap='order'>结束出题</view>
+  </view>
+</view>

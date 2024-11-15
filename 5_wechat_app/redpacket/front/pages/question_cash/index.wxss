@@ -1,0 +1,100 @@
+.main{
+  padding: 0 30rpx;
+  font-size: 28rpx;
+}
+.service{
+  font-size:28rpx;
+  line-height:80rpx;
+  text-align:right;
+}
+.service[plain]{
+  border: none;
+  color:#646f8d;
+  padding: 0;
+}
+.content{
+  height: 560rpx;
+  background: white;
+  padding: 0 30rpx;
+}
+.balance{
+  display: flex;
+  padding:20rpx 0 10rpx 0;
+  align-items: baseline;
+}
+.balance .money{
+  margin-left: 50rpx;
+}
+.balance .money .num{
+  color: #d95940;
+  font-size: 36rpx;
+}
+.waring{
+  width:600rpx;
+  text-align:center;
+  color:#fff;
+  line-height:40rpx;
+  background: #ea5e3a;
+  border-radius:20rpx;
+}
+.cash-withdrawal-amount{
+  margin-top: 20rpx;
+}
+.input-money{
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  border-bottom:2rpx solid #eee;
+}
+.input-money input{
+  margin-left: 20rpx;
+  font-size: 56rpx;
+  height: 100rpx;
+}
+.withdrawals{
+  line-height: 80rpx;
+  color: #b1b1b1;
+}
+.withdrawals .all{
+  color:#646f8d;
+}
+.cash-withdraw{
+  height:80rpx;
+  line-height:80rpx;
+  margin-top:20rpx;
+  color:#fff;
+  font-size:32rpx;
+}
+.remind{
+  color: #959595;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.problem{
+  position:fixed;
+  bottom:30rpx;
+  left:50%;
+  transform:translateX(-50%);
+  color: #646f8d;
+}
+.jzwb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cecece;
+    padding: 20rpx;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+}
+.hx {
+    width: 80rpx;
+    height: 1px;
+    background: #d5d5d5;
+}
+.wz {
+    margin: 0 10rpx;
+}
+.ggw{
+  width: 100%;
+  height: 320rpx;
+}

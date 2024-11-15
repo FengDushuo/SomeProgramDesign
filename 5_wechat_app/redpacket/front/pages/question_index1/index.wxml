@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="main">
+  <image class="bgimg" src="/images/question_bg.jpg"></image>
+  <view class='avator'>
+    <image src='{{img}}'></image>
+  </view>
+  <view class='username'>嗨!<text>{{name}}</text></view>
+  <view class='introduction'>{{notice}}</view>
+  <view class='subject'>
+    <view>题目数量</view>
+    <view>{{num}}题</view>
+  </view>
+  <view class="choice">
+    <view>5</view>
+    <view class='slider-center'>
+      <slider min="5" max="10" backgroundColor="#dba857" activeColor="#b8721d" block-size="24" block-color="#d95940" bindchange="sliderChange"/>
+    </view>
+    <view>10</view>
+  </view>
+  <view class='lssue'>
+    <button class='lssue-button' size="mini" wx:if="{{hydl == true}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">去出题</button>
+    <block wx:else>
+      <view class='lssue-button' bindtap='lssue'>去出题</view>
+    </block>
+  </view>
+</view>

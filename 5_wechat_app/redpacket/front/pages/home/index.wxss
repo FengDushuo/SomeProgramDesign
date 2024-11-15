@@ -1,0 +1,47 @@
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  margin: 90rpx 50rpx;
+  padding-bottom: 90rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 144rpx;
+  height: 144rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.header {
+  float: left;
+  display: flex;
+  width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+}
+
+.header image {
+  width: 144rpx;
+  height: 144rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+  font-size: 14px;
+  line-height: 50rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  padding: 80rpx 50rpx 0 50rpx;
+}

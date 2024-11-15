@@ -1,0 +1,10 @@
+<!--pages/answer/index.wxml-->
+<view class='main'>
+  <view class='list'>
+    <view class='topic' wx:for="{{list}}">
+      <view class='problem'>{{index+1}}.{{item.question}}</view>
+      <view class='answer'>正确答案:<text>{{item.options}}</text></view>
+    </view>
+  </view>
+  <view class='back' bindtap='back'>返回</view>
+</view>

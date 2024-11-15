@@ -1,0 +1,25 @@
+<!--pages/already/index.wxml-->
+<view class="main"><!--真机需要更换为网络图片-->
+  <view class='content'>
+    <view class='subject' wx:for="{{subject}}">
+      <view class='problem'>{{index+1}}\t{{item.subject.question}}</view>
+      <view wx:for="{{item.subject.options}}" wx:for-item="optionsitem" class="answer {{index == item.idx ? 'selected' : ''}}" bindtap='selected' data-index="{{index}}" data-id="{{item.subject.id}}">{{optionsitem}}</view>
+    </view>
+  </view>
+  <view class='confirm' bindtap='confirm'>确定</view>
+  <view class='authbg' wx:if="{{show == 1 && zf == 1}}" catchtouchmove="preventTouchMove" bindtap='cancelpay'>
+    <view class='pay-auth'>
+      <view class='auth-title'>拆包提示</view>
+      <view class='auth-content'>
+        <view class='auth-detail'>
+        红包金额<text class='color-red'>{{order.answer_money}}</text>元,
+        答对<text class='color-red'>{{order.red_count}}</text>题即可领取,
+        拆包需支付红包金额的<text class='color-red'>{{order.red_consume}}%</text>押金,
+        答题成功,即可获得押金和红包奖励(共<text class='color-red'>{{order.answer_money+order.amount}}</text>元),答题失败押金归出题方所有
+        </view>
+        <view class='auth-button bg-red' bindtap='answerOrder'>拆开红包</view>
+        <view class='auth-button' bindtap='sendRed'>去发红包</view>
+      </view>
+    </view>
+  </view>
+</view>

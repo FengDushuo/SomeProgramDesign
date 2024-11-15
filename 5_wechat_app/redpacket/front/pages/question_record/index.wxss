@@ -1,0 +1,104 @@
+/* pages/record/index.wxss */
+.main{
+  font-size: 32rpx;
+  padding-bottom:80rpx;
+}
+.head{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  color: #acacac;
+  line-height: 90rpx;
+  font-weight: bold;
+}
+.head .title{
+  width: 50%;
+  text-align: center;
+}
+.default{
+  border-bottom: 4rpx solid #fff;
+}
+.selected{
+  color: #d95940;
+  border-bottom: 4rpx solid #d95940;
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  border-radius: 50%;
+  border:2rpx solid #f0e9cd;
+}
+.avatar image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.nickname{
+  margin-top: 20rpx;
+  text-align:center;
+}
+.nickname text{
+  color: #646f8d;
+}
+.moneynum{
+  display: flex;
+  align-items: center;
+  text-align:center;
+  margin-top: 60rpx;
+}
+.moneynum .money{
+  width: 30%;
+  margin-left: 20%;
+}
+.moneynum .num{
+  width: 30%;
+}
+.moenynumcolor{
+  color: #acacac;
+}
+.moneynum .bottom{
+  font-size: 48rpx;
+  margin-top: 10rpx;
+  font-weight: bold;
+}
+.list{
+  margin-top: 100rpx;
+  background: white;
+  font-size: 28rpx;
+  line-height:40rpx;
+}
+.list .line{
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.list .line .top{
+  display: flex;
+  align-items: center;
+}
+.list .line .lower{
+  display: flex;
+  align-items: center;
+}
+.color-red{
+  color: #d95940;
+}
+.color-gray{
+  color: #666;
+}
+.color-blue{
+  color: #34AAFF;
+}
+.answer{
+  display: flex;
+  align-items: center;
+}
+.answer .answer-center{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.answer image{
+  width: 80rpx;
+  height: 80rpx;
+}

@@ -1,0 +1,11 @@
+<!--pages/demolition/index.wxml-->
+<view class="main">
+  <image class="bgimg" src="/img/share.jpg"></image>
+  <image class='avatar common' src="{{user.img}}"></image>
+  <view class='nickname common'>{{user.name}}</view>
+  <view class='hair common'>给你发了一个答题红包</view>
+  <view class='num common' wx:if="{{show == 1}}">总金额***元</view>
+  <button wx:if="{{hydl == true}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" plain='true' hover-class='none' class='demolition common'>查看红包</button>
+  <view wx:else class='demolition common' bindtap='seeRed'>查看红包</view>
+  <button class='service common' plain='true' hover-class='none' openType="contact">联系客服</button>
+</view>

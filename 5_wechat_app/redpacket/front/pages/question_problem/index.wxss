@@ -1,0 +1,39 @@
+/* pages/problem/index.wxss */
+image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.main{
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+.problem{
+  display: flex;
+  align-items: center;
+  line-height: 80rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+.service{
+  height:80rpx;
+  line-height:80rpx;
+  margin-top:50rpx;
+  color:#fff;
+  font-size:32rpx;
+}
+.color{
+  color: #999;
+  border-bottom: 2rpx solid #ddd;
+}
+.answer{
+  background: #fff;
+  padding: 20rpx 30rpx;
+}
+.version{
+  position:fixed;
+  bottom:30rpx;
+  left:50%;
+  transform:translateX(-50%);
+  color: #999;
+}

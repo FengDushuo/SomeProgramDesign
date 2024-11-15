@@ -1,0 +1,89 @@
+/* pages/lssue/index.wxss */
+page{
+  background-color: #d95940;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: #d95940;
+    background-size: 100% 100%;
+}
+.top{
+  display: flex;
+  align-items: center;
+  padding: 50rpx 40rpx;
+}
+.num{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 15rpx;
+}
+.center{
+  flex: 1;
+}
+.switch{
+  display: flex;
+  align-items: center;
+  background: #fd7960;
+  padding: 15rpx 20rpx;
+  border-radius: 50rpx;
+  box-shadow: 0 8rpx 6rpx #a9432a;
+  font-size: 28rpx;
+}
+.switch image{
+  width: 36rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.content{
+  padding: 40rpx;
+}
+.subject{
+  background: #fff;
+  padding: 80rpx;
+  border-radius: 10rpx;
+}
+.problem{
+  font-size: 32rpx;
+  color: #d95940;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+}
+.answer{
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 50rpx;
+  padding-left: 50rpx;
+  color: #323232;
+  margin-top: 20rpx;
+}
+.selected{
+  background: #d95940;
+  color: #fff;
+  border-color: #d95940;
+}
+.choice{
+  position: fixed;
+  left: 50%;
+  bottom: 100rpx;
+  transform: translateX(-50%);
+  color: #b02925;
+  display: flex;
+  align-items: center;
+  line-height: 70rpx; 
+  text-align: center;
+  font-size: 28rpx;
+}
+.choice view{
+  width: 180rpx;
+  background: #fff3e3;
+  border-radius: 40rpx;
+}
+.choice-center{
+  margin: 0 30rpx;
+}

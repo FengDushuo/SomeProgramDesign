@@ -1,0 +1,48 @@
+/* pages/generate/index.wxss */
+.main {
+  padding-top: 100rpx;
+}
+image{
+  display: block;
+}
+.bgimg {
+    width: 320rpx;
+    height: 420rpx;
+    margin: 0 auto;
+}
+.generate{
+  text-align: center;
+  padding:50rpx 0;
+  border-bottom:2rpx solid #e7e7e7;
+  margin-bottom:50rpx;
+}
+.send{
+  width: 500rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+.share{
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  width:500rpx;
+  background:#1aac1b;
+  line-height:100rpx;
+  border-radius: 50rpx;
+  color: #fbf8ff;
+}
+.share[plain]{
+  border: none;
+  padding: 0 100rpx;
+}
+.share image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  margin-left: 100rpx;
+}
+.detail{
+  width: 150rpx;
+  height: 40rpx;
+}

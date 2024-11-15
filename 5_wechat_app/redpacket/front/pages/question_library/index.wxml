@@ -1,0 +1,25 @@
+<!--pages/library/index.wxml-->
+<view class='main'>
+  <view class='left'>
+    <view class="tab {{cateIdx == index ? 'selected' : ''}}" wx:for="{{cateList}}" bindtap='selectCate' data-idx="{{index}}">
+      {{item.catename}}
+    </view>
+    <view class='left-button already' bindtap='already'>已出题目</view>
+    <view class='subject-num' bindtap='already'>{{len}}/{{num}}</view>
+    <view style='clear:both'></view>
+    <view class='left-button endbg' bindtap='order'>结束出题</view>
+  </view>
+  <view class='right'>
+    <view class="select-sub {{item.selected == true ? 'selectedbg' : ''}}" wx:for='{{subject}}'>
+      <view class='delete' bindtap='bindDelete' data-id="{{item.id}}" style="{{item.selected == true ? '' : 'visibility:hidden;'}}">x</view>
+      <view class='subject-title'>{{item.question}}</view>
+      <view class='option'>选项</view>
+      <radio-group bindchange="radioChange">
+        <view class='subject-answer' wx:for="{{item.options}}" wx:for-item="opitem">
+          <radio value="{{item.id+'_'+index}}" checked="{{index == item.idx ? true : false}}" color='#d95940' />
+          <view class='answer-text'>{{opitem}}</view>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+</view>

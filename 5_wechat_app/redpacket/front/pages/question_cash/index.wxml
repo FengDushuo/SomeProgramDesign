@@ -1,0 +1,28 @@
+<!--pages/cash/index.wxml-->
+<view class='main'>
+  <button class='service'  plain='true' hover-class='none' openType="contact">联系客服</button>
+  <form bindsubmit="formSubmit">
+  <view class='content'>
+    <view class='balance'>
+      <view>账户余额</view>
+      <view class='money'><text class='num'>{{money}}</text>\t<text class='yuan'>元</text></view>
+    </view>
+    <view class='waring' style="{{show == false ? 'visibility:hidden;' : ''}}">{{waring}}</view>
+    <view class='cash-withdrawal-amount'>提现金额</view>
+    <view class='input-money'>
+      <view class='symbol'>¥</view>
+      <input name='cash' maxlength="7" type='digit' bindinput="bindKeyInput" value='{{cash}}'></input>
+    </view>
+    <view class='withdrawals'>提现到微信钱包,\t<text class='all' bindtap='allCash'>全部提现</text></view>
+    <button type='primary' class='cash-withdraw' form-type="submit">提现</button>
+    <view class='remind'>{{notice}}</view>
+  </view>
+  </form>
+  <view class="jzwb">
+      <view class="hx"></view>
+      <view class="wz">您还可以参加以下活动</view>
+      <view class="hx"></view>
+  </view>
+  <image src='{{ggw}}' class='ggw' bindtap='wkzc'></image>
+  <view class='problem' bindtap='problem'>常见问题</view>
+</view>

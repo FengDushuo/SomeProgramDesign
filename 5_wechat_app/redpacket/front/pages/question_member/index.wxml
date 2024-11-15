@@ -1,0 +1,40 @@
+<!--logs.wxml-->
+<view class='main'>
+  <view class='head'>
+    <view class='avatar'>
+      <image src='{{img}}'></image>
+    </view>
+    <view class='username'>{{name}}</view>
+  </view>
+  <view class='content'>
+    <view class='wallet' bindtap='cash' wx:if='{{show == 1}}'>
+      <image src='/img/wallet.png'></image>
+      <view class='wallet-center'>钱包</view>
+      <view><text class='money'>{{money}}</text>\t元</view>
+    </view>
+    <view class='wallet' bindtap='record'>
+      <image src='/img/jilu.png'></image>
+      <view class='wallet-center'>我的记录</view>
+    </view>
+    <view class='wallet margin-none' bindtap='problem'>
+      <image src='/img/problem.png'></image>
+      <view class='wallet-center'>常见问题</view>
+    </view>
+    <view class='wallet last'>
+      <image src='/img/service.png'></image>
+      <button class='wallet-center service' openType="contact" plain='true' hover-class='none'>联系客服</button>
+    </view>
+  </view>
+  <view class='authbg' wx:if="{{hydl == true}}">
+    <view class='auth'>
+      <view class='auth-title'>授权提示</view>
+      <view class='auth-content'>
+        <view class='auth-detail'>
+        由于收发答题红包需要获取你的头像和昵称,请点击下方按钮进行授权
+        </view>
+        <button class='auth-button' size="mini" type='primary' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确认授权</button>
+      </view>
+        <button class='auth-service' openType="contact" plain='true' hover-class='none'>联系客服</button>
+    </view>
+  </view>
+</view>

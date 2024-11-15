@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    >
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back"></ImageView>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:text="设置"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_video_config"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="11dp"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:text="分辨率"
+            android:paddingLeft="18dp"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_height="47dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_xy"
+            android:onClick="videoDimensions"
+            android:layout_width="match_parent"
+            android:text="480*640"
+            android:paddingLeft="18dp"
+            android:textColor="#333333"
+            android:background="@color/white"
+            android:paddingRight="18dp"
+            android:drawableRight="@drawable/img_more"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_height="47dp">
+        </TextView>
+
+
+        <TextView
+            android:layout_marginTop="11dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:text="帧率"
+            android:paddingLeft="18dp"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_height="47dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_frame"
+            android:onClick="frameSetting"
+            android:layout_width="match_parent"
+            android:text="15"
+            android:background="@color/white"
+            android:paddingLeft="18dp"
+            android:textColor="#333333"
+            android:paddingRight="18dp"
+            android:drawableRight="@drawable/img_more"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_height="47dp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_video_setting"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_camera"
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_centerVertical="true"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:textColor="#333333"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="15sp"
+            android:text="开启摄像头">
+
+        </androidx.appcompat.widget.SwitchCompat>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_mic"
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_centerVertical="true"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:textColor="#333333"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="15sp"
+            android:text="开启麦克风">
+
+        </androidx.appcompat.widget.SwitchCompat>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_denoise"
+        android:layout_width="match_parent"
+        android:layout_marginTop="11dp"
+        android:layout_centerVertical="true"
+        android:layout_height="47dp"
+        android:background="@color/white"
+        android:textColor="#333333"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="15sp"
+        android:text="AI智能降噪"/>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_avdata"
+        android:layout_width="match_parent"
+        android:layout_marginTop="11dp"
+        android:layout_centerVertical="true"
+        android:layout_height="47dp"
+        android:background="@color/white"
+        android:textColor="#333333"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="15sp"
+        android:text="点对点音视频数据展示"/>
+
+
+</LinearLayout>

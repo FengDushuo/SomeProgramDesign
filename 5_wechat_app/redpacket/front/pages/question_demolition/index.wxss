@@ -1,0 +1,61 @@
+/* pages/demolition/index.wxss */
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #ffda8c;
+}
+.bgimg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.common{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.avatar{
+  top: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+}
+.nickname{
+  top: 280rpx;
+  color: #ffe2ac;
+}
+.hair{
+  top: 340rpx;
+}
+.num{
+  top: 400rpx;
+}
+.demolition{
+  width:300rpx;
+  height:300rpx;
+  background:#fed699;
+  color:#363533;
+  font-size:54rpx;
+  bottom:200rpx;
+  border-radius:50%;
+  line-height:300rpx;
+  text-align:center;
+  font-weight:bold;
+  letter-spacing:6rpx;
+}
+.demolition[plain]{
+  border: none;
+  background:#fed699;
+  padding: 0;
+}
+.service{
+  bottom: 30rpx;
+  font-size:28rpx;
+}
+.service[plain]{
+  border: none;
+  color:#ffd5a1;
+  padding: 0;
+}
+

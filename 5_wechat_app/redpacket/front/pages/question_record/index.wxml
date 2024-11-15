@@ -1,0 +1,52 @@
+<!--pages/record/index.wxml-->
+<view class='main'>
+  <view class='head'>
+    <view bindtap='selectLabel' data-idx='0' class="title {{selectedIdx == 0 ? 'selected' : 'default'}}">我发出的</view>
+    <view bindtap='selectLabel' data-idx='1' class="title {{selectedIdx == 1 ? 'selected' : 'default'}}">我答过的</view>
+  </view>
+  <view class='avatar'>
+    <image src='{{users.img}}'></image>
+  </view>
+  <view class='nickname'><text>{{users.name}}</text>\t<text wx:if="{{show == 1}}">{{selectedIdx == 0 ? '共发出' : '共收到'}}</text></view>
+  <view class='moneynum' wx:if="{{show == 1}}">
+    <view class='money'>
+      <view class='moenynumcolor'>金额\t(元)</view>
+      <view class='bottom'>{{total_amount}}</view>
+    </view>
+    <view class='num'>
+      <view class='moenynumcolor'>数量\t(个)</view>
+      <view class='bottom'>{{count}}</view>
+    </view>
+  </view>
+  <!--列表-->
+  <view class='list'>
+    <!--我发出的-->
+    <block wx:if="{{selectedIdx == 0}}">
+    <view class='line' bindtap='detail' wx:for="{{recordList}}" data-id="{{item.id}}">
+      <view class='top'>
+        <view>答题红包-答对{{item.red_count}}题<text wx:if="{{show == 1}}">可抢</text></view>
+        <view style='flex:1;'></view>
+        <view wx:if="{{show == 1}}"><text class='color-red'>{{item.red_amount}}</text>\t元</view>
+      </view>
+      <view class='lower'>
+        <view class='color-gray'>{{item.creat_time}}</view>
+        <view style='flex:1;'></view>
+        <view><text class='color-blue'>领取中</text>\t<text class='color-gray'>{{item.receive}}/{{item.red_num}}</text></view>
+      </view>
+    </view>
+    </block>
+    <!--我答过得-->
+    <block wx:else>
+      <view class='line answer' data-id="{{item.order_id}}" bindtap='detail' wx:for="{{recordList}}">
+        <image src='{{item.img}}'></image>
+        <view class='answer-center'>
+          <view>答题红包-来自{{item.name}}</view>
+          <view class='color-gray'>{{item.complete_time}}</view>
+        </view>
+        <view class='color-red' wx:if="{{item.answer_status == 0}}">失败</view>
+        <view class='color-blue' wx:elif="{{item.answer_status == 1 && show == 0}}">成功</view>
+        <view wx:elif="{{item.answer_status == 1 && show == 1}}"><text class='color-blue'>{{item.success_amount}}</text>\t元</view>
+      </view>
+    </block>
+  </view>
+</view>

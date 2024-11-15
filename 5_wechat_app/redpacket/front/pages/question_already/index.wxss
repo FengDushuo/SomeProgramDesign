@@ -1,0 +1,65 @@
+page{
+  background: #d95940;
+}
+.main {
+  font-size: 32rpx;
+  color: #fff;
+}
+.content{
+  padding: 40rpx;
+  padding-bottom: 150rpx;
+}
+.subject{
+  background: #fff;
+  padding: 80rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+.problem{
+  font-size: 32rpx;
+  color: #d95940;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+}
+.answer{
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 50rpx;
+  padding-left: 50rpx;
+  color: #323232;
+  margin-top: 20rpx;
+}
+.selected{
+  background: #d95940;
+  color: #fff;
+  border-color: #d95940;
+}
+.delete{
+  width: 160rpx;
+  background: #f9d9a6;
+  color: #ac8858;
+  text-align: center;
+  border-radius: 30rpx;
+  padding: 5rpx 10rpx;
+  float: right;
+  margin-top: 20rpx; 
+  font-size: 28rpx;
+}
+.confirm{
+  position: fixed;
+  bottom: 50rpx;
+  width: 400rpx;
+  text-align: center;
+  color: #9c3900;
+  box-shadow: 0 8rpx 8rpx #a4600d;
+  background: #fec84e;
+  left:50%;
+  transform: translateX(-50%);
+  line-height: 80rpx;
+  border-radius: 50rpx;
+}

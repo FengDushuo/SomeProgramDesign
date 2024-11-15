@@ -1,0 +1,85 @@
+<!--pages/order/index.wxml-->
+<view class="main">
+  <image class="bgimg" src="/images/orderbg.jpg"></image>
+  <view class='content'>
+    <view class='waring' style="{{noticeShow == false ? 'visibility:hidden;' : ''}}">{{waring}}</view>
+    <view class='money' style="{{show != 1 ? 'visibility:hidden;' : ''}}">
+      <view>红包金额</view>
+      <view class='center'>
+        <input placeholder='填写红包总金额' type='digit' maxlength='7' placeholder-class='input-placeholder'  bindinput="bindRedAmount"></input>
+      </view>
+      <view>元</view>
+    </view>
+    <view class='money'>
+      <view>红包个数</view>
+      <view class='center'>
+        <input placeholder='填写红包个数' type='number' maxlength='3' placeholder-class='input-placeholder' bindinput="bindRedNum"></input>
+      </view>
+      <view>个</view>
+    </view>
+    <view class='money'>
+      <view>至少答对<text class='count'>(共{{mySubjectLen}}题)</text></view>
+      <view class='center'>
+        <picker value="{{index}}" range="{{count}}" bindchange="countChange">
+          <view class='picker-selected'>{{count[countIndex]}}\t题</view>
+        </picker>
+      </view>
+      <view>＞</view>
+    </view>
+    <view class='money' wx:if="{{show == 1}}">
+      <view>拆包金额<text class='count'>(答方支付)</text></view>
+      <view class='center'>
+        <picker value="{{index}}" range="{{consume}}" bindchange="consumeChange">
+          <view class='picker-selected'>{{consume[consumeIndex]}}\t%</view>
+        </picker>
+      </view>
+      <view>＞</view>
+    </view>
+    <view class='commission count' style="{{show != 1 ? 'visibility:hidden;' : ''}}">需支付￥{{serviceTotal == null ? '0.00' : serviceTotal}}元服务费</view>
+    <view class='generate' bindtap='generate'>生成答题红包</view>
+  </view>
+  <!--选择支付方式-->
+  <form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true"  wx:if="{{show == 1}}">
+        <view bindtap="yczz" class="drawer_screen" wx:if="{{showModal}}"></view>
+        <view class="drawer_box" wx:if="{{showModal}}">
+            <view class="drawer_title">请选择支付方式</view>
+            <view class="weui-cells weui-cells_after-title">
+                <radio-group bindchange="radioChange1" class="radio-group" name="radiogroup">
+                    <label>
+                        <view class="weui-cell">
+                            <view class="zfimg">
+                                <image src="/img/weixin.png"></image>
+                            </view>
+                            <view class="weui-cell__bd">微信支付</view>
+                            <view class="weui-cell__ft">
+                                <radio checked="{{zffs==1}}" value="wxzf"></radio>
+                            </view>
+                        </view>
+                    </label>
+                    <label>
+                        <view class="weui-cell" style="border-top:1rpx solid #e6e6e6;">
+                            <view class="zfimg">
+                                <image src="/img/yezf.png"></image>
+                            </view>
+                            <view class="weui-cell__bd">余额支付
+                <text class="yetext">您的余额{{money}}元</text>
+                            </view>
+                            <view class="weui-cell__ft">
+                                <radio checked="{{zffs==2}}" color="#FF9700" value="yezf"></radio>
+                            </view>
+                        </view>
+                    </label>
+                </radio-group>
+            </view>
+            <view class="drawer_title1">您选择的{{zfwz}}</view>
+            <button class="{{btntype}}" disabled="{{zfz}}" formType="submit">
+                <view wx:if="{{!zfz}}">确定支付<text class="zftext">￥{{totalPrice}}</text></view>
+                <view wx:if="{{zfz}}">
+                    <text class="zfztext">支付中...</text>
+                </view>
+            </button>
+        </view>
+    </form>
+
+  <view class='notice'  wx:if="{{show == 1}}">未领取的红包将于3天后返回余额</view>
+</view>

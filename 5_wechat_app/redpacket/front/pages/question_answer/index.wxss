@@ -1,0 +1,40 @@
+/* pages/answer/index.wxss */
+page{
+  background: #d95940;
+}
+.main{
+  font-size: 32rpx; 
+  padding: 0 30rpx;
+}
+.list{
+  padding-bottom: 180rpx;
+}
+.topic{
+  background: #fff;
+  padding: 30rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+}
+.problem{
+  color: #d95940;
+  line-height: 50rpx;
+}
+.topic text{
+  margin-left: 20rpx;
+}
+.answer{
+  margin-top: 20rpx;
+}
+.back{
+  position: fixed;
+  bottom: 50rpx;
+  width: 400rpx;
+  text-align: center;
+  color: #ffe2cd;
+  box-shadow: 0 8rpx 8rpx #9c1d26;
+  background: #ef4e3a;
+  left:50%;
+  transform: translateX(-50%);
+  line-height: 80rpx;
+  border-radius: 50rpx;
+}

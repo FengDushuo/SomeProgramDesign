@@ -1,0 +1,13 @@
+<!--pages/problem/index.wxml-->
+<view class='main'>
+  <view class='' wx:for="{{list}}">
+    <view class="problem {{selectindex == index ? 'color' : ''}}" bindtap='selected' data-index='{{index}}'>
+      <view>{{item.problem}}</view>
+      <view style='flex:1;'></view>
+      <image src='/img/move.png'></image>
+    </view>
+    <view wx:if="{{selectindex == index}}" class='answer'>{{item.answer}}</view>
+  </view>
+  <button type='primary'  openType="contact" class='service'>联系在线客服</button>
+  <view class='version'>v1.0.0</view>
+</view>
