@@ -1,0 +1,10 @@
+<view>
+    <image class='pic' src='{{login_image}}'></image>
+</view>
+<view class='wxloggin'>
+  <form>
+    <view>
+      <button type='primary' open-type='getUserInfo' bindgetuserinfo='doLogin'>微信登录</button>
+    </view>
+  </form>
+</view>

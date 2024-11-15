@@ -1,0 +1,10 @@
+<!--video.wxml-->
+<view class="container">
+    <view class="page__hd">
+        <text class="page__title">极致的健身环境</text>
+        <text class="page__desc">引领全新健身潮流趋势，提供宽敞奢华的健身空间，打造高素质服务团队，让您在锻炼中得到极致的体验。</text>
+    </view>
+        <view class="section tc">
+            <video src="{{showvideo}}" binderror="videoErrorCallback" bindplay="playvideo"></video>
+        </view>
+</view>

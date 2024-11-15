@@ -1,0 +1,60 @@
+<view class="container" style="background-image: url({{bg_img}})">
+   <view class="swiper-container">
+      <swiper previous-margin='10px'  next-margin='10px' bindchange="swiperChange" style='height:{{swiperH}};' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <swiper-item wx:for='{{banner}}' wx:key=''>
+          <image class='le-img {{nowIdx==index?"le-active":""}}' bindload='getHeight' src='{{item.picUrl}}' style='height:{{swiperH}};'></image>
+        </swiper-item>
+      </swiper>
+    </view>
+
+  <view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+        <view class="zan-cell__bd">怪兽健身</view>
+        <view class="zan-cell__ft">
+          <view class="img-box" bindtap="showmap">场馆详细地址
+            <image src="../../resource/image/index/icon/ico-addr-red.png" class="img" />
+          </view>
+        </view>
+    </view>
+    <view class="zan-font-10">MT怪兽健身为新生代健身俱乐部领军团队，厚积薄发，勇面挑战，致力于为客户提供最贴心、最专业的健身实训与咨询服务。</view>
+    <!-- <view class="zan-font-10">MT怪兽健身期待您的参与，您的满意将是我们前进的动力！</view> -->
+</view>
+<view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+        <view class="zan-cell__bd">优良环境</view>
+        <view class="zan-cell__ft">
+            <view class="img-box" bindtap="showvideo">实景视频展示
+                <image src="../../resource/image/index/icon/video.png" class="imgvideo" />
+            </view>
+        </view>
+    </view>
+    <view class="envimg" wx:for="{{envpic}}">
+        <image src="{{item.picUrl}}"></image>
+    </view>
+</view>
+  <view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd">教练天团</view>
+      <view class="zan-cell__ft">
+          <view class="img-box" bindtap="toAllCoachesTap">查看全部教练
+        <image src="../../resource/image/index/icon/icon-weightlift-sel.png" class="img" />
+        </view>
+      </view>
+    </view>
+   <view class="swiper-container">
+        <swiper class="swiper_box">
+            <block wx:for="{{coaches}}">
+                <swiper-item>
+                  <view class="coach">
+                    <image class="swiper-item-coach" data-id="{{item.id}}" src="{{item.pic}}"/>
+                    <view class="zan-font-12-bold">{{item.title}}</view>
+                  </view>
+                  
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+  </view>
+
+
+</view>

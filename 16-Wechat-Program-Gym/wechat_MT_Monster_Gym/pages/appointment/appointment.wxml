@@ -1,0 +1,29 @@
+<!--appointment.wxml-->
+<view class="container">
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">教练天团</view>
+      <view class="zan-cell__ft">Coaches</view>
+    </view>
+    <block wx:for="{{ coaches }}">
+      <view class="article__item">
+        <view class="article__thumb">
+          <image class="article__image" src="{{ item.pic }}"></image>
+        </view>
+        <view class="article__info">
+          <view class="article__title">
+            <view class="article__title_font">{{ item.title }}</view>
+            <navigator url="/pages/coaches-detail/coaches-detail?id={{item.id}}">
+              <view class="appointBtn border-radius">
+                <view class="appointFont">约TA</view>
+              </view>
+            </navigator>
+          </view>
+          <view class="article__desc">
+            <text class="article__time">{{ item.keywords }}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

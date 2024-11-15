@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="zan-panel" bindtap="toclass">
+      <view class="zan-cell zan-cell--access">
+          <view class="zan-cell__bd">健身课程</view>
+          <view class="zan-cell__ft">
+              <view class="img-box">优质课程供您选择
+                  <image src="../../resource/image/index/icon/icon-weightlift-sel.png" class="img" />
+              </view>
+          </view>
+      </view>
+      <view class="section__ctn">
+          <image class="image" src="../../resource/image/find/class/kecheng.jpg" mode="widthFix" />
+      </view>
+    </view>
+</view>

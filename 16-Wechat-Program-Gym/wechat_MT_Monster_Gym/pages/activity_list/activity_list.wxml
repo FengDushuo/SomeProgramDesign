@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="zan-panel" bindtap="toappointment">
+      <view class="zan-cell zan-cell--access">
+          <view class="zan-cell__bd">预约教练</view>
+          <view class="zan-cell__ft">
+              <view class="img-box">优质教练等您预约
+                  <image src="../../resource/image/index/icon/icon-weightlift-sel.png" class="img" />
+              </view>
+          </view>
+      </view>
+      <view class="section__ctn">
+          <image class="image" src="../../resource/image/activity/coaches/sijiao.jpg" mode="widthFix" />
+      </view>
+    </view>
+</view>
